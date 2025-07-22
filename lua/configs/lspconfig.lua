@@ -2,7 +2,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "gopls", "pyright", "svelte", "ts_ls", "denols" }
+local servers = { "html", "cssls", "gopls", "pyright", "svelte", "ts_ls", "denols", "omnisharp" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -38,4 +38,9 @@ lspconfig.gopls.setup {
       },
     },
   },
+}
+
+-- omnisharp custom config
+lspconfig.omnisharp.setup {
+  cmd = { "OmniSharp", "--languageserver", "--hostPID", vim.fn.getpid() },
 }

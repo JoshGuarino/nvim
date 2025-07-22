@@ -28,6 +28,7 @@ return {
         "cmake",
         "sql",
         "gitignore",
+        "c_sharp",
       },
     },
   },

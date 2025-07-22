@@ -8,6 +8,7 @@ local options = {
     javascript = { "prettierd" },
     json = { "prettierd" },
     markdown = { "prettierd" },
+    cs = { "csharpier" },
   },
 
   format_on_save = {
