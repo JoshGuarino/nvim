@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "doomchad",
+  theme = "catppuccin",
 
   -- hl_override = {
   --   Comment = { italic = true },
@@ -22,10 +22,10 @@ M.term = {
   sizes = { sp = 0.3, vsp = 0.4, ["bo sp"] = 0.3, ["bo vsp"] = 0.4 },
   float = {
     relative = "editor",
-    row = 0.15,
-    col = 0.15,
-    width = 0.7,
-    height = 0.7,
+    row = 0.1,
+    col = 0.1,
+    width = 0.8,
+    height = 0.8,
     border = "single",
   },
 }
