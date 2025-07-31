@@ -6,12 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
-
-  -- hl_override = {
-  --   Comment = { italic = true },
-  --   ["@comment"] = { italic = true },
-  -- },
+  theme = "doomchad",
 }
 
 M.nvdash = {
@@ -33,7 +28,7 @@ M.term = {
 M.ui = {
   statusline = {
     theme = "default",
-    separator_style = "arrow",
+    separator_style = "default",
     order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
   },
 }
