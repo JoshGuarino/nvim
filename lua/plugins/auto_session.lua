@@ -2,12 +2,12 @@ return {
   "rmagatti/auto-session",
   lazy = false,
   keys = {
-    { "<leader>ss", "<cmd>SessionSearch<cr>" },
-    { "<leader>sw", "<cmd>SessionSave<cr>" },
-    { "<leader>sl", "<cmd>SessionLoad<cr>" },
-    { "<leader>sd", "<cmd>SessionDelete<cr>" },
-    { "<leader>sr", "<cmd>SessionRename<cr>" },
-    { "<leader>st", "<cmd>SessionToggleAutoSave<cr>" },
+    { "<leader>ss", "<cmd>AutoSession search<cr>", desc = "Session search" },
+    { "<leader>sw", "<cmd>AutoSession save<cr>", desc = "Save session" },
+    { "<leader>sd", "<cmd>AutoSession delete<cr>", desc = "Delete session" },
+    { "<leader>st", "<cmd>AutoSession toggle<cr>", desc = "Toggle autosave" },
+    { "<leader>sr", "<cmd>AutoSession restore<cr>", desc = "Restore session" },
+    { "<leader>spo", "<cmd>AutoSession purgeOrphaned<cr>", desc = "Purge orphaned sessions" },
   },
   opts = {
     suppressed_dirs = { "~/", "~/repos/", "/" },

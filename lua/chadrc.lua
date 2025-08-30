@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "tundra",
+  theme = "catppuccin",
 }
 
 M.nvdash = {
