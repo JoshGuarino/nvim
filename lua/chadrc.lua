@@ -28,7 +28,7 @@ M.term = {
 M.ui = {
   statusline = {
     theme = "default",
-    separator_style = "default",
+    separator_style = "round",
     order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
   },
 }
