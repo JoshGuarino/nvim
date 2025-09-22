@@ -1,34 +1,30 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "gopls", "pyright", "svelte", "ts_ls", "denols", "omnisharp" }
-local nvlsp = require "nvchad.configs.lspconfig"
+local servers = { "html", "cssls", "gopls", "pyright", "svelte", "ts_ls" }
+
+local ts_on_attach = function(client, bufnr) end
 
 -- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
-end
+vim.lsp.enable(servers)
 
--- deno lsp custom config
-lspconfig.denols.setup {
-  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-}
+-- denols custom config
+vim.lsp.config("denols", {
+  root_markers = { "deno.json" },
+  on_attach = ts_on_attach,
+})
 
 -- ts_ls custom config
-lspconfig.ts_ls.setup {
-  root_dir = lspconfig.util.root_pattern "package.json",
+vim.lsp.config("ts_ls", {
+  root_markers = { "package.json" },
   single_file_support = false,
-}
+  on_attach = ts_on_attach,
+})
 
 -- gopls custom config
-lspconfig.gopls.setup {
-  cmd = { "gopls" },
+vim.lsp.config("gopls", {
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  cmd = { "gopls" },
   settings = {
     gopls = {
       completeUnimported = true,
@@ -38,9 +34,4 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
-
--- omnisharp custom config
-lspconfig.omnisharp.setup {
-  cmd = { "OmniSharp", "--languageserver", "--hostPID", vim.fn.getpid() },
-}
+})
