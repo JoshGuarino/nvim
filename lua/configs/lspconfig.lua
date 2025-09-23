@@ -1,25 +1,27 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "gopls", "pyright", "svelte", "ts_ls" }
+-- check if in deno project
+local is_deno_project = function()
+  local root = vim.fn.getcwd()
+  local files = vim.fn.readdir(root)
+  for _, file in ipairs(files) do
+    if file == "deno.json" then
+      return true
+    end
+  end
+  return false
+end
 
-local ts_on_attach = function(client, bufnr) end
+-- enable lsps with default configs
+vim.lsp.enable { "html", "cssls", "gopls", "pyright", "svelte" }
 
--- lsps with default config
-vim.lsp.enable(servers)
-
--- denols custom config
-vim.lsp.config("denols", {
-  root_markers = { "deno.json" },
-  on_attach = ts_on_attach,
-})
-
--- ts_ls custom config
-vim.lsp.config("ts_ls", {
-  root_markers = { "package.json" },
-  single_file_support = false,
-  on_attach = ts_on_attach,
-})
+-- use denols if in deno project else use ts_ls
+if is_deno_project() then
+  vim.lsp.enable "denols"
+else
+  vim.lsp.enable "ts_ls"
+end
 
 -- gopls custom config
 vim.lsp.config("gopls", {
