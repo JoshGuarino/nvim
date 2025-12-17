@@ -1,0 +1,43 @@
+return {
+		"nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        branch = "master",
+        config = function()
+            require("nvim-treesitter.configs").setup {
+                ensure_installed = {
+                    "vim",
+                    "lua",
+                    "vimdoc",
+                    "html",
+                    "css",
+                    "go",
+                    "python",
+                    "typescript",
+                    "javascript",
+                    "ruby",
+                    "php",
+                    "java",
+                    "kotlin",
+                    "scala",
+                    "c",
+                    "cpp",
+                    "rust",
+                    "markdown",
+                    "json",
+                    "yaml",
+                    "toml",
+                    "make",
+                    "cmake",
+                    "sql",
+                    "gitignore",
+                    "c_sharp",
+                },
+                highlight = {
+                    enable = true,
+                    use_languagetree = true,
+                },
+                indent = { enable = true },
+                folds = { enable = true },
+            }
+        end,
+}
