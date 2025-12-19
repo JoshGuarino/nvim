@@ -1,7 +1,9 @@
 local map = vim.keymap.set
 
--- command mode
+-- general
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 -- buffer navigation
 map("n", "<C-h>", "<C-w>h", { desc = "switch buffer left" })
