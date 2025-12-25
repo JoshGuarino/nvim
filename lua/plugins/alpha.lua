@@ -17,6 +17,7 @@ return {
 			[[                                                    ]],
 		}
 
+		dashboard.section.header.opts.hl = "AlphaHeader"
 		dashboard.section.buttons.val = {
 			dashboard.button("ff", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
 			dashboard.button("e", "   File Explorer", "<cmd>NvimTreeToggle<CR>"),
