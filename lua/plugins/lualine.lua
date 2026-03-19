@@ -5,7 +5,6 @@ return {
 		require("lualine").setup({
 			options = {
 				globalstatus = true,
-				theme = "catppuccin",
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 			},
