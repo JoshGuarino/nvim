@@ -1,9 +1,7 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	branch = "master",
+	"romus204/tree-sitter-manager.nvim",
 	config = function()
-		require("nvim-treesitter.configs").setup({
+		require("tree-sitter-manager").setup({
 			ensure_installed = {
 				"vim",
 				"lua",
@@ -34,12 +32,6 @@ return {
 				"elixir",
 				"heex",
 			},
-			highlight = {
-				enable = true,
-				use_languagetree = true,
-			},
-			indent = { enable = true },
-			folds = { enable = true },
 		})
 	end,
 }

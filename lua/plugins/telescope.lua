@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	dependencies = { "romus204/tree-sitter-manager.nvim" },
 	cmd = "Telescope",
 	opts = function()
 		return {
