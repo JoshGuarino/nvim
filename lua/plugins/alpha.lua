@@ -28,6 +28,7 @@ return {
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
 			dashboard.button("c", "   Check Health", ":checkhealth<CR>"),
 			dashboard.button("m", "   Mason", ":Mason<CR>"),
+			dashboard.button("t", "   Treesitter", ":TSManager<CR>"),
 		}
 
 		alpha.setup(dashboard.opts)

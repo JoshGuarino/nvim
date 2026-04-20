@@ -59,3 +59,6 @@ map("n", "<leader>spo", "<cmd>AutoSession purgeOrphaned<cr>", { desc = "Purge or
 -- Lsp Commands
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "Go to declaration" })
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to definition" })
+
+-- tree-sitter-manager
+map("n", "<leader>t", "<cmd>TSManager<CR>", { desc = "open tree-sitter manager" })
