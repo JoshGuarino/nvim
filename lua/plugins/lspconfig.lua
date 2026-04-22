@@ -18,7 +18,6 @@ return {
 
 		-- gopls custom config
 		vim.lsp.config("gopls", {
-			filetypes = { "go", "gomod", "gowork", "gotmpl" },
 			cmd = { "gopls" },
 			settings = {
 				gopls = {
