@@ -21,8 +21,8 @@ return {
 
 		dashboard.section.header.opts.hl = "AlphaHeader"
 		dashboard.section.buttons.val = {
-			dashboard.button("f", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
-			dashboard.button("e", "   File Explorer", "<cmd>NvimTreeToggle<CR>"),
+			dashboard.button("f", "󰮗   Find file", ":Telescope find_files<CR>"),
+			dashboard.button("e", "   File Explorer", ":NvimTreeToggle<CR>"),
 			dashboard.button("r", "󱘞   Ripgrep", ":Telescope live_grep<CR>"),
 			dashboard.button("q", "󰗼   Quit", ":qa<CR>"),
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
