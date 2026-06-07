@@ -31,6 +31,7 @@ return {
 				"c_sharp",
 				"elixir",
 				"heex",
+				"prisma",
 			},
 		})
 	end,

@@ -3,7 +3,18 @@ return {
 	dependencies = { "williamboman/mason.nvim" },
 	config = function()
 		-- enable lsps with default configs
-		vim.lsp.enable({ "lua_ls", "html", "cssls", "gopls", "pyright", "ts_ls", "denols", "rust_analyzer", "elixirls" })
+		vim.lsp.enable({
+			"lua_ls",
+			"html",
+			"cssls",
+			"gopls",
+			"pyright",
+			"ts_ls",
+			"denols",
+			"rust_analyzer",
+			"elixirls",
+			"prismals",
+		})
 
 		-- lua_ls custom config
 		vim.lsp.config("lua_ls", {
