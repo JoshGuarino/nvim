@@ -6,12 +6,12 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "gofmt" },
-				css = { "prettierd" },
-				html = { "prettierd" },
-				typescript = { "prettierd" },
-				javascript = { "prettierd" },
-				json = { "prettierd" },
-				markdown = { "prettierd" },
+				css = { "prettier" },
+				html = { "prettier" },
+				typescript = { "prettier" },
+				javascript = { "prettier" },
+				json = { "prettier" },
+				markdown = { "prettier" },
 				rust = { "rustfmt" },
 			},
 
