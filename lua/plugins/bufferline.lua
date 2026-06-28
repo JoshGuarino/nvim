@@ -5,7 +5,6 @@ return {
 	lazy = false,
 	config = function()
 		require("bufferline").setup({
-			highlights = require("catppuccin.special.bufferline").get_theme(),
 			options = {
 				indicator = {
 					style = "none",
