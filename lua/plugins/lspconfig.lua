@@ -14,6 +14,7 @@ return {
 			"rust_analyzer",
 			"elixirls",
 			"prismals",
+			"templ",
 		})
 
 		-- lua_ls custom config

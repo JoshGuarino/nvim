@@ -13,6 +13,7 @@ return {
 				json = { "prettier" },
 				markdown = { "prettier" },
 				rust = { "rustfmt" },
+				templ = { "templ" },
 			},
 
 			format_on_save = {

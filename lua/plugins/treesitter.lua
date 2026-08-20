@@ -32,6 +32,7 @@ return {
 				"elixir",
 				"heex",
 				"prisma",
+				"templ",
 			},
 		})
 	end,
